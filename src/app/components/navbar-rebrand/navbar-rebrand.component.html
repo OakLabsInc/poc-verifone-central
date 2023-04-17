@@ -1,0 +1,454 @@
+<nav class="navbar is-rebrand" [ngClass]="view">
+  <div class="navbar-brand is-right-marginless-touch">
+    <a class="navbar-item" href="javascript:void()">
+      <div class="logo">
+        <img src="https://design-system-master.s3.amazonaws.com/dist/latest/assets/logos/Verifone/png/Verifone_logotype_white_rgb.png" />
+      </div>
+    </a>
+    <a role="button"
+      onclick="this.classList.toggle('is-active');document.querySelector('.navbar-menu').classList.toggle('is-active')"
+      class="navbar-burger has-text-black" aria-label="menu" aria-expanded="false" data-target="#navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start">
+
+      <div class="navbar-item has-dropdown is-hoverable is-mega " id="Commerce">
+        <div class="is-hidden-touch navbar-link flex mr-4 is-arrowless">
+          <span (click)="changePage('/commerce',false)">Commerce</span>
+        </div>
+        <div class="navbar-dropdown p-4">
+          <div class="container">
+            <div class="columns is-top-paddingless-touch">
+              <div class="mr-5 is-hidden-mobile is-quarter-width">
+                <div class="title is-4 has-text-primary has-min-width-250">Commerce</div>
+                <div class="is-size-7 ">Optimize commerce operations with a comprehensive suite of payment tools,
+                  designed to streamline transactions and maximize revenue. Stay on top of financial performance with
+                  detailed reporting on sales and revenue, and never miss a payment with a reliable payment
+                  deliverables.</div>
+              </div>
+              <div class="dropdown-title-mobile is-hidden-desktop is-hidden-tablet flex-row justify-space-between"
+                onclick="document.querySelector('#commerce-subnav').classList.toggle('is-hidden-mobile');document.querySelector('#commerce-subnav-arrow').classList.toggle('is-active')">
+                <div class="title is-6 has-text-primary">Commerce</div>
+                <span class="icon title-icon is-hidden-tablet" id="commerce-subnav-arrow">
+                  <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </span>
+              </div>
+              <div id="commerce-subnav"
+                class="columns is-subnav justify-space-between is-flex-grow-1 is-hidden-mobile pr-3 pl-3 is-left-paddingless-touch is-right-paddingless-touch">
+
+                <div
+                  class="column pt-0 is-left-paddingless-mobile is-right-paddingless-mobile has-margin-top-20-mobile">
+                  <div class="title is-6 has-border-bottom has-text-weight-normal pb-1">Reporting</div>
+
+                  <div class="mb-3 ">
+                    <span (click)="changePage('/payments/dashboard',true)"
+                      class="has-text-dark has-text-weight-bold">Payments Dashboard</span>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <span (click)="changePage('/payments/transactions',true)"
+                      class="has-text-dark has-text-weight-bold">Transactions</span>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href="https://devportal.dimebox.com/payments/reports/secure-authentications"
+                      class="has-text-dark has-text-weight-bold">3D Secure Authentications</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href="https://devportal.dimebox.com/payments/reports/settlements"
+                      class="has-text-dark has-text-weight-bold">Settlements</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href="https://devportal.dimebox.com/payments/reports/generated-reports"
+                      class="has-text-dark has-text-weight-bold">Generated Reports</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href="https://devportal.dimebox.com/payments/dashboard"
+                      class="has-text-dark has-text-weight-bold">Audit Log</a>
+                  </div>
+
+                </div>
+
+                <div
+                  class="column pt-0 is-left-paddingless-mobile is-right-paddingless-mobile has-margin-top-20-mobile">
+                  <div class="title is-6 has-border-bottom has-text-weight-normal pb-1">Payment Derivations</div>
+
+                  <div class="mb-3 ">
+                    <a href="https://devportal.dimebox.com/payments/dashboard"
+                      class="has-text-dark has-text-weight-bold">Dispute Management</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href="https://devportal.dimebox.com/payments/dashboard"
+                      class="has-text-dark has-text-weight-bold">Settlement Invoices</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href="https://devportal.dimebox.com/payments/dashboard"
+                      class="has-text-dark has-text-weight-bold">Generated Reports for Partner Commisions</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href="https://devportal.dimebox.com/payments/dashboard"
+                      class="has-text-dark has-text-weight-bold">Payouts</a>
+                  </div>
+
+                </div>
+
+                <div
+                  class="column pt-0 is-left-paddingless-mobile is-right-paddingless-mobile has-margin-top-20-mobile">
+                  <div class="title is-6 has-border-bottom has-text-weight-normal pb-1">Payment Tools</div>
+
+                  <div class="mb-3 ">
+                    <a href="https://devportal.dimebox.com/payments/dashboard"
+                      class="has-text-dark has-text-weight-bold">Pay-by-Link</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-item has-dropdown is-hoverable is-mega " id="Devices">
+        <div class="is-hidden-touch navbar-link flex mr-4 is-arrowless">
+          <span>Devices</span>
+        </div>
+        <div class="navbar-dropdown p-4">
+          <div class="container">
+            <div class="columns is-top-paddingless-touch">
+              <div class="mr-5 is-hidden-mobile is-quarter-width">
+                <div class="title is-4 has-text-primary has-min-width-250">Devices</div>
+                <div class="is-size-7 ">Easily track & monitor all your devices in real-time. Software Library ensures
+                  devices always have the latest updates, while Device Reports provide valuable insights to help make
+                  informed decisions about tech infrastructure.</div>
+              </div>
+              <div class="dropdown-title-mobile is-hidden-desktop is-hidden-tablet flex-row justify-space-between"
+                onclick="document.querySelector('#devices-subnav').classList.toggle('is-hidden-mobile');document.querySelector('#devices-subnav-arrow').classList.toggle('is-active')">
+                <div class="title is-6 has-text-primary">Devices</div>
+                <span class="icon title-icon is-hidden-tablet" id="devices-subnav-arrow">
+                  <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </span>
+              </div>
+              <div id="devices-subnav"
+                class="columns is-subnav justify-space-between is-flex-grow-1 is-hidden-mobile pr-3 pl-3 is-left-paddingless-touch is-right-paddingless-touch">
+
+                <div
+                  class="column pt-0 is-left-paddingless-mobile is-right-paddingless-mobile has-margin-top-20-mobile">
+                  <div class="title is-6 has-border-bottom has-text-weight-normal pb-1">Estate Management</div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">All Devices</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Hierarchies</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Tenants</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Rollouts</a>
+                  </div>
+
+                </div>
+
+                <div
+                  class="column pt-0 is-left-paddingless-mobile is-right-paddingless-mobile has-margin-top-20-mobile">
+                  <div class="title is-6 has-border-bottom has-text-weight-normal pb-1">Software Library</div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Software</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Keys</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Media</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Reference Sets</a>
+                  </div>
+
+                </div>
+
+                <div
+                  class="column pt-0 is-left-paddingless-mobile is-right-paddingless-mobile has-margin-top-20-mobile">
+                  <div class="title is-6 has-border-bottom has-text-weight-normal pb-1">Device Reports</div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">All Reports</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Device Reports</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Report Scheduler</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Custom Reports</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-item has-dropdown is-hoverable is-mega " id="Administration">
+        <div class="is-hidden-touch navbar-link flex mr-4 is-arrowless">
+          <span>Administration</span>
+        </div>
+        <div class="navbar-dropdown p-4">
+          <div class="container">
+            <div class="columns is-top-paddingless-touch">
+              <div class="mr-5 is-hidden-mobile is-quarter-width">
+                <div class="title is-4 has-text-primary has-min-width-250">Administration</div>
+                <div class="is-size-7 ">Easily set up new accounts streamlined Account Setup process, optimize financial
+                  operations with our FinOps tools & fine-tune account with our Advanced Settings options.</div>
+              </div>
+              <div class="dropdown-title-mobile is-hidden-desktop is-hidden-tablet flex-row justify-space-between"
+                onclick="document.querySelector('#administration-subnav').classList.toggle('is-hidden-mobile');document.querySelector('#administration-subnav-arrow').classList.toggle('is-active')">
+                <div class="title is-6 has-text-primary">Administration</div>
+                <span class="icon title-icon is-hidden-tablet" id="administration-subnav-arrow">
+                  <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </span>
+              </div>
+              <div id="administration-subnav"
+                class="columns is-subnav justify-space-between is-flex-grow-1 is-hidden-mobile pr-3 pl-3 is-left-paddingless-touch is-right-paddingless-touch">
+
+                <div
+                  class="column pt-0 is-left-paddingless-mobile is-right-paddingless-mobile has-margin-top-20-mobile">
+                  <div class="title is-6 has-border-bottom has-text-weight-normal pb-1">Account Setup</div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Organization Company and
+                      Sites</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Payment Provider Contracts</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Points of Interaction</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Users</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Demo Account</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Alerts</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Settings</a>
+                  </div>
+
+                </div>
+
+                <div
+                  class="column pt-0 is-left-paddingless-mobile is-right-paddingless-mobile has-margin-top-20-mobile">
+                  <div class="title is-6 has-border-bottom has-text-weight-normal pb-1">Advanced Settings</div>
+
+                  <div class="mb-3 ">
+                    <a href="d"  class="has-text-dark has-text-weight-bold">3DS Contracts</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Fraud Prevention Services</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Price Lists</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Wallets</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Blocking Rulesets</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Notifications</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href="https://devportal.dimebox.com/payments/dashboard"
+                      class="has-text-dark has-text-weight-bold">Checkout Themes</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Whitelabeling</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-item has-dropdown is-hoverable is-mega " id="Boarding">
+        <div class="is-hidden-touch navbar-link flex mr-4 is-arrowless">
+          <span>Boarding</span>
+        </div>
+        <div class="navbar-dropdown p-4">
+          <div class="container">
+            <div class="columns is-top-paddingless-touch">
+              <div class="mr-5 is-hidden-mobile is-quarter-width">
+                <div class="title is-4 has-text-primary has-min-width-250">Boarding</div>
+                <div class="is-size-7 ">Verifone’s Boarding Services’, enables ordering & configuring omnichannel
+                  payment solutions loaded with software and services you need from a single location.</div>
+              </div>
+              <div class="dropdown-title-mobile is-hidden-desktop is-hidden-tablet flex-row justify-space-between"
+                onclick="document.querySelector('#boarding-subnav').classList.toggle('is-hidden-mobile');document.querySelector('#boarding-subnav-arrow').classList.toggle('is-active')">
+                <div class="title is-6 has-text-primary">Boarding</div>
+                <span class="icon title-icon is-hidden-tablet" id="boarding-subnav-arrow">
+                  <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </span>
+              </div>
+              <div id="boarding-subnav"
+                class="columns is-subnav justify-space-between is-flex-grow-1 is-hidden-mobile pr-3 pl-3 is-left-paddingless-touch is-right-paddingless-touch">
+
+                <div
+                  class="column pt-0 is-left-paddingless-mobile is-right-paddingless-mobile has-margin-top-20-mobile">
+                  <div class="title is-6 has-border-bottom has-text-weight-normal pb-1">Repair</div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Exchangees & Swaps</a>
+                  </div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Repair</a>
+                  </div>
+
+                </div>
+
+                <div
+                  class="column pt-0 is-left-paddingless-mobile is-right-paddingless-mobile has-margin-top-20-mobile">
+                  <div class="title is-6 has-border-bottom has-text-weight-normal pb-1">Reports</div>
+
+                  <div class="mb-3 ">
+                    <a href=""  class="has-text-dark has-text-weight-bold">Performance</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="navbar-item is-hidden">
+      <div class="icon is-size-4">
+        <i class="fa fa-search"></i>
+      </div>
+    </div>
+    <div class="navbar-item is-hidden dropdown is-hoverable" onclick="this.classList.toggle('is-active')">
+      <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+          <span>Organisations</span>
+          <span class="icon">
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+        <div class="dropdown-content">
+          <div class="dropdown-item">
+            <p>You can insert <strong>any type of content</strong> within the dropdown menu.</p>
+          </div>
+          <hr class="dropdown-divider" />
+          <div class="dropdown-item">
+            <p>You simply need to use a <code>&lt;div&gt;</code> instead.</p>
+          </div>
+          <hr class="dropdown-divider" />
+          <a href="#" class="dropdown-item">
+            This is a link
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-item is-hidden dropdown is-hoverable" onclick="this.classList.toggle('is-active')">
+      <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+          <span>Locations</span>
+          <span class="icon">
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+        <div class="dropdown-content">
+          <div class="dropdown-item">
+            <p>You can insert <strong>any type of content</strong> within the dropdown menu.</p>
+          </div>
+          <hr class="dropdown-divider" />
+          <div class="dropdown-item">
+            <p>You simply need to use a <code>&lt;div&gt;</code> instead.</p>
+          </div>
+          <hr class="dropdown-divider" />
+          <a href="#" class="dropdown-item">
+            This is a link
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div
+        class="navbar-item has-dropdown has-circle is-hoverable is-flex is-justify-content-start is-align-items-start is-flex-direction-column">
+        <a class="navbar-link is-arrowless mr-0">
+          <div class="circle">VH</div>
+        </a>
+        <div class="navbar-dropdown is-right">
+          <a class="navbar-item">
+            My Account
+          </a>
+          <a class="navbar-item">
+            Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="hero has-commerce-background-image">
+  <div class="hero-body p-7">
+    <router-outlet class="app-content"></router-outlet>
+  </div>
+</section>

@@ -3,18 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { App1SharedModule } from 'projects/app1/src/app/app.module';
-import { App2SharedModule } from 'projects/app2/src/app/app.module';
+
+import { NavbarRebrandComponent } from './components/navbar-rebrand/navbar-rebrand.component';
+import { mopSharedModule } from 'projects/mop/src/app/app.module';
+import { paymentsSharedModule } from 'projects/payments/src/app/app.module';
+import { commerceSharedModule } from 'projects/commerce/src/app/app.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarRebrandComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    App1SharedModule.forRoot(),
-    App2SharedModule.forRoot()
+    mopSharedModule.forRoot(),
+    paymentsSharedModule.forRoot(),
+    commerceSharedModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,9 @@
 {
-  "name": "my-app",
+  "name": "verifone-central",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "app1:start": "ng serve -o --project='app1'",
+    "start": "ng serve -o",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -19,6 +18,7 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "@verifone/ui-design-system": "git+ssh://git@bitbucket.verifone.com:7999/cpui/ui-design-system.git#v0.17.5",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
