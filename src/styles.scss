@@ -1,4 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@verifone/ui-design-system/src/variables/all";
+@import "../node_modules/@verifone/ui-design-system/docs/css/custom-bulma.css";
 
 
+.hero.is-rebrand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  padding-top: 75px;
+  text-overflow: none;
+  .title {
+    color: #fafafa !important;
+  }
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  &.has-commerce-background-image {
+    background-image: url('#{$assets-baseurl}/images/IMAGE-FPO_brand-sec-head-COMMERCE.png');
+  }
+  &.has-administration-background-image {
+    background-image: url('#{$assets-baseurl}/images/IMAGE-FPO_brand-sec-head-ADMIN.png');
+  }
+  &.has-devices-background-image {
+    background-image: url('#{$assets-baseurl}/images/IMAGE-FPO_brand-sec-head-DEVICES.png');
+  }
+  &.has-boarding-background-image {
+    background-image: url('#{$assets-baseurl}/images/IMAGE-FPO_brand-sec-head-BOARDING.png');
+  }
+  &.has-virtualterminal-background-image {
+    background-image: url('#{$assets-baseurl}/images/IMAGE-FPO_brand-sec-head-VIRTUALTERM.png');
+  }
+  &.has-paybylink-background-image {
+    background-image: url('#{$assets-baseurl}/images/IMAGE-FPO_brand-sec-head-PBL.png');
+  }
+}
+
+.circle-background{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.has-danger-circle-background {
+  @extend .circle-background;
+  background-color: $vf-danger-100;
+}
+.has-success-circle-background {
+  @extend .circle-background;
+  background-color: $vf-success-100;
+}
 
